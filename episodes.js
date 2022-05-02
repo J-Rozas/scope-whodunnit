@@ -16,18 +16,36 @@
 
 
 // Episode 2
-const murderer = 'Professor Plum';
+// const murderer = 'Professor Plum';
 
-const changeMurderer = function() {
-  murderer = 'Mrs. Peacock';
-}
+// const changeMurderer = function() {
+//   murderer = 'Mrs. Peacock';
+// }
+
+// const declareMurderer = function() {
+//   return `The murderer is ${murderer}.`;
+// }
+
+// changeMurderer();
+// const verdict = declareMurderer();
+// console.log(verdict);
+
+// My prediction is that there is going to be an error, because changeMurderer tries to change the value the constant murderer
+
+
+// Episode 3
+let murderer = 'Professor Plum';
 
 const declareMurderer = function() {
+  let murderer = 'Mrs. Peacock';
   return `The murderer is ${murderer}.`;
 }
 
-changeMurderer();
-const verdict = declareMurderer();
-console.log(verdict);
+const firstVerdict = declareMurderer();
+console.log('First Verdict: ', firstVerdict);
 
-// My prediction is that there is going to be an error, because changeMurderer tries to change the value the constant murderer
+const secondVerdict = `The murderer is ${murderer}.`;
+console.log('Second Verdict: ', secondVerdict);
+
+// My prediction is that the output be 1. First Verdict: The murderer is Mrs. Peacock  2. Second Verdict: The murderer is Professor Plum.
+// This is because the although the variable murderer seems to change in the function declareMurderer, that change is only local.
