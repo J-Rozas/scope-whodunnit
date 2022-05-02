@@ -69,22 +69,46 @@
 
 
 // Episode 5
-const scenario = {
-  murderer: 'Miss Scarlet',
-  room: 'Kitchen',
-  weapon: 'Candle Stick'
-};
+// const scenario = {
+//   murderer: 'Miss Scarlet',
+//   room: 'Kitchen',
+//   weapon: 'Candle Stick'
+// };
 
-const changeWeapon = function(newWeapon) {
-  scenario.weapon = newWeapon;
-}
+// const changeWeapon = function(newWeapon) {
+//   scenario.weapon = newWeapon;
+// }
 
-const declareWeapon = function() {
-  return `The weapon is the ${scenario.weapon}.`;
-}
+// const declareWeapon = function() {
+//   return `The weapon is the ${scenario.weapon}.`;
+// }
 
-changeWeapon('Revolver');
-const verdict = declareWeapon();
-console.log(verdict);
+// changeWeapon('Revolver');
+// const verdict = declareWeapon();
+// console.log(verdict);
 
 // My prediction is that the output is going to be The weapon is the Revolver. This is because you can change the value of a key from within a function, even if the object is not declared in the same function.
+
+
+// Episode 6
+let murderer = 'Colonel Mustard';
+
+const changeMurderer = function() {
+  murderer = 'Mr. Green';
+
+  const plotTwist = function() {
+    murderer = 'Mrs. White';
+  }
+
+  plotTwist();
+}
+
+const declareMurderer = function () {
+  return `The murderer is ${murderer}.`;
+}
+
+changeMurderer();
+const verdict = declareMurderer();
+console.log(verdict);
+
+// My prediction is that the output is going to be The murderer is Mrs. White. This is because when changeMurderer is called, although at first the murderer is Mr. Green, the plot twist always happens, making Mrs. White become the murderer
